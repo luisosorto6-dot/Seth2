@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tutorial Web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Mi Tutorial Web</h1>
+    <p>Aprende paso a paso</p>
+</header>
+
+<nav>
+    <button onclick="mostrar('html')">HTML</button>
+    <button onclick="mostrar('css')">CSS</button>
+    <button onclick="mostrar('js')">JavaScript</button>
+</nav>
+
+<main>
+    <section id="contenido">
+        <h2>Bienvenido</h2>
+        <p>Selecciona un tema arriba para comenzar.</p>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 Tutorial básico</p>
+</footer>
+
+<script>
+function mostrar(tema) {
+    const contenido = document.getElementById("contenido");
+
+    if (tema === "html") {
+        contenido.innerHTML = "<h2>HTML</h2><p>Estructura de la web.</p>";
+    } else if (tema === "css") {
+        contenido.innerHTML = "<h2>CSS</h2><p>Diseño y estilos.</p>";
+    } else {
+        contenido.innerHTML = "<h2>JavaScript</h2><p>Interactividad.</p>";
+    }
+}
+</script>
+
+</body>
+</html>
